@@ -1,6 +1,7 @@
 # Shopping List Test
 
 You can check deployed version [sasha-khbrv.github.io/shoppingList/](https://sasha-khbrv.github.io/shoppingList/)
+
 To run the app in the development mode *npm start* / *yarn start*
 
 ## Project Description
@@ -18,4 +19,5 @@ Redux, Redux Toolkit, classnames
 
 ## Credits
 Design - [Data table design components. Free UI Kit](https://www.figma.com/community/file/1021406552622495462/Data-table-design-components.-Free-UI-Kit)
+
 Icons - [iconfinder.com/](https://www.iconfinder.com/)
