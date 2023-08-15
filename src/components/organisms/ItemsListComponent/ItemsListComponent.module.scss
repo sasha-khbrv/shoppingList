@@ -1,0 +1,58 @@
+@import "src/styles/helpers/variables";
+@import "src/styles/helpers/mixins";
+
+.container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: var(--spacing-semi-large) 0;
+  border-radius: var(--border-radius-medium);
+  border: var(--border-basic);
+}
+
+.header {
+  width: 100%;
+  padding: 0 var(--spacing-semi-large);
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns:
+    $nameCell
+    calc(#{$amountCell} + #{$buttonCell} + #{$columnGap});
+  column-gap: $columnGap;
+  margin-bottom: var(--spacing-large);
+
+  span {
+    color: var(--dark-tone-80);
+    font-size: var(--font-size-small);
+    font-weight: var(--font-weight-large);
+    line-height: var(--line-height-small);
+  }
+}
+
+.list {
+  @include yScroll;
+  width: 100%;
+  height: 100%;
+
+  padding: 0 var(--spacing-semi-large) var(--spacing-semi-large);
+  box-sizing: border-box;
+
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  .listItem {
+    grid-template-columns:
+      $nameCell
+      $amountCell
+      $buttonCell;
+    column-gap: $columnGap;
+
+    &:not(:last-child) {
+      margin-bottom: $columnGap;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "src/styles/helpers/mixins.scss";
+
+.basicButton {
+  width: 100%;
+  height: var(--block-size-medium);
+  box-sizing: border-box;
+  padding: 0 var(--spacing-large);
+
+  background-color: var(--ligh-tone-primary);
+  color: var(--dark-tone-100);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+  font-weight: var(--font-weight-large);
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+  column-gap: var(--spacing-extra-small);
+
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius-medium);
+  cursor: pointer;
+
+  &.oneColumn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    color: var(--accent-tone-100);
+    background-color: var(--accent-tone-8);
+  }
+
+  &:disabled {
+    color: var(--dark-tone-60);
+    background-color: var(--dark-tone-8);
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  &:focus {
+    @include focusBorder;
+  }
+}

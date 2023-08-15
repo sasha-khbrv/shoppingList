@@ -1,0 +1,35 @@
+@import "styles/helpers/normilize.scss";
+@import "styles/helpers/variables.scss";
+
+// Global styles
+body {
+  font-family: var(--font-family);
+  color: var(--dark-tone-100);
+  background-color: var(--ligh-tone-primary);
+  background: var(--gradient-primary);
+}
+
+// Global heading styles
+h1 {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-large);
+  line-height: 1.375em;
+}
+
+h2 {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-large);
+  line-height: 1em;
+}
+
+a {
+  color: var(--dark-tone-100);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-medium);
+  text-decoration: underline;
+
+  &:active,
+  &:hover {
+    color: var(--accent-tone-100);
+  }
+}

@@ -1,0 +1,9 @@
+.errorMessage {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  font-size: var(--font-size-extra-small);
+  font-weight: var(--font-weight-small);
+  color: var(--red-50);
+}

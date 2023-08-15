@@ -1,0 +1,14 @@
+.wrapper {
+  width: 90%;
+  max-width: 1160px;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5.5rem 1fr;
+
+  box-sizing: border-box;
+  padding: var(--spacing-large) 0 var(--spacing-extra-large);
+}

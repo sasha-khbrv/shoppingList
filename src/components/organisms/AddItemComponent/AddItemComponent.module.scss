@@ -1,0 +1,16 @@
+@import "src/styles/helpers/variables";
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  row-gap: var(--spacing-large);
+}
+
+.formContainer {
+  grid-template-columns:
+    $nameCell
+    $amountCell
+    auto;
+  column-gap: $columnGap;
+}

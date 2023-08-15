@@ -1,0 +1,30 @@
+import React, { FC, ChangeEvent } from "react";
+import styles from "./InputField.module.scss";
+import Input from "components/atoms/Input/Input";
+import FieldError from "components/atoms/FieldError/FieldError";
+
+type Props = {
+  id: string;
+  name: string;
+  type: string;
+  placeholder?: string;
+  value: string | number;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onConfirm?: (field: string, value: string | number) => void;
+  onReset?: () => void;
+  error?: string;
+  disabled?: boolean;
+  min?: number;
+};
+
+const InputField: FC<Props> = ({ error, ...restProps }) => {
+  console.log(restProps.name, error);
+
+  return (
+    <label className={styles.container}>
+      <Input isError={!!error} {...restProps} />
+      {error && <FieldError error={error} />}
+    </label>
+  );
+};
+export default InputField;

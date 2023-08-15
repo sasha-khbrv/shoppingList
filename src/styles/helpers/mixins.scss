@@ -1,0 +1,28 @@
+@mixin focusBorder {
+  border: var(--border-active);
+  outline: var(--outline-active);
+}
+
+@mixin basicCotainer {
+  background-color: var(--white-100);
+  border-radius: 0 0 var(--border-radius-medium);
+  box-shadow: var(--basic-box-shadow);
+}
+
+@mixin yScroll {
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+    margin-left: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--dark-tone-8);
+    border-radius: 2px;
+  }
+}

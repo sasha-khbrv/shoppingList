@@ -1,0 +1,43 @@
+@import "src/styles/helpers/mixins";
+
+.inputItem {
+  width: 100%;
+  height: var(--block-size-medium);
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--dark-tone-4);
+  background-color: var(--dark-tone-4);
+  box-sizing: border-box;
+  padding: 0 var(--spacing-medium);
+
+  &::placeholder {
+    color: var(--dark-tone-40);
+  }
+
+  &:focus {
+    @include focusBorder;
+  }
+
+  &:hover {
+    border: var(--border-active);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: var(--dark-tone-40);
+
+    &:hover {
+      border-color: var(--dark-tone-4) !important;
+    }
+  }
+
+  &.error {
+    border: var(--border-warning);
+    background-color: var(--red-4);
+
+    &:focus {
+      @include focusBorder;
+      border: var(--border-warning);
+    }
+  }
+}

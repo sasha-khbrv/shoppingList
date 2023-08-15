@@ -1,0 +1,15 @@
+@import "src/styles/helpers/mixins";
+
+.container {
+  @include basicCotainer;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  row-gap: var(--spacing-semi-large);
+
+  box-sizing: border-box;
+  padding: var(--spacing-semi-large);
+}
