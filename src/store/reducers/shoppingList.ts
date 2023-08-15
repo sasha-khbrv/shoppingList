@@ -1,4 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { getRandomItems } from "helpers/getRandomListItems";
 import { ItemType } from "types/types";
 
 type State = {
@@ -7,13 +8,7 @@ type State = {
 };
 
 const initialState: State = {
-  items: [
-    { name: "Apples", id: 1, amount: 3 },
-    { name: "Soy Milk", id: 2, amount: 1 },
-    { name: "Bread", id: 3, amount: 2 },
-    { name: "Rice", id: 6, amount: 1 },
-    { name: "Tomatoes", id: 7, amount: 4 },
-  ],
+  items: getRandomItems(),
   removedItems: [],
 };
 
