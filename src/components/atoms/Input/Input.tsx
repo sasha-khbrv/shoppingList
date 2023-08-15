@@ -20,6 +20,7 @@ type Props = {
   onReset?: () => void;
   isError: boolean;
   disabled?: boolean;
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
 };
 
 const Input: FC<Props> = ({
@@ -28,6 +29,7 @@ const Input: FC<Props> = ({
   label,
   isError,
   disabled = true,
+  onBlur,
   ...restProps
 }) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -64,7 +66,7 @@ const Input: FC<Props> = ({
       ref={inputRef}
       className={inputClasses}
       onKeyDown={handleKeyDown}
-      onBlur={handleBlur}
+      onBlur={onBlur || handleBlur}
       {...restProps}
     />
   );

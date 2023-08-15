@@ -11,7 +11,7 @@ const Logo: FC = () => {
       xmlns="http://www.w3.org/2000/svg"
       className={styles.logo}
     >
-      <g clip-path="url(#clip0_258_59989)">
+      <g clipPath="url(#clip0_258_59989)">
         <mask
           id="mask0_258_59989"
           style={{ maskType: "alpha" }}
@@ -67,8 +67,8 @@ const Logo: FC = () => {
           y2="136"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#644DED" />
-          <stop offset="1" stop-color="#CCA081" />
+          <stop stopColor="#644DED" />
+          <stop offset="1" stopColor="#CCA081" />
         </linearGradient>
         <clipPath id="clip0_258_59989">
           <rect width="100" height="136" fill="white" />

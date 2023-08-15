@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, useState } from "react";
+import React, { ChangeEvent, FC, FocusEvent, useState } from "react";
 import Button from "components/atoms/Button";
 import { useDispatch } from "react-redux";
 import { addItem } from "store/reducers/shoppingList";
@@ -8,6 +8,7 @@ import InputField from "../InputField/InputField";
 import classNames from "classnames";
 import styles from "./NewItemForm.module.scss";
 import validateAllFormInputs from "helpers/validateAllFormInputs";
+import validateFormInput from "helpers/validateFormInput";
 
 const DEFAULT_ITEM = {
   name: "",
@@ -37,6 +38,12 @@ const NewItemForm: FC<Props> = ({ className }) => {
     setFields({ ...fields, [name]: value });
   };
 
+  const handleBlur = (e: FocusEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    const validation = validateFormInput(name, value);
+    setErrors({ ...errors, [name]: validation });
+  };
+
   const formClasses = classNames(styles.container, className);
 
   return (
@@ -49,6 +56,7 @@ const NewItemForm: FC<Props> = ({ className }) => {
         name="name"
         placeholder="New item"
         error={errors?.["name"]}
+        onBlur={handleBlur}
       />
       <InputField
         type="number"

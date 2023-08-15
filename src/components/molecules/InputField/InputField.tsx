@@ -1,4 +1,4 @@
-import React, { FC, ChangeEvent } from "react";
+import React, { FC, ChangeEvent, FocusEvent } from "react";
 import styles from "./InputField.module.scss";
 import Input from "components/atoms/Input/Input";
 import FieldError from "components/atoms/FieldError/FieldError";
@@ -15,11 +15,10 @@ type Props = {
   error?: string;
   disabled?: boolean;
   min?: number;
+  onBlur?: (event: FocusEvent<HTMLInputElement>) => void;
 };
 
 const InputField: FC<Props> = ({ error, ...restProps }) => {
-  console.log(restProps.name, error);
-
   return (
     <label className={styles.container}>
       <Input isError={!!error} {...restProps} />
