@@ -6,11 +6,11 @@ import styles from "./ShoppingList.module.scss";
 
 const ShoppingList: FC = () => {
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <h1>Shopping List</h1>
       <ItemsListComponent />
       <AddItemComponent />
-    </div>
+    </main>
   );
 };
 export default withLayout(ShoppingList);

@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 
 const Header: FC = () => {
   return (
-    <div className={styles.container}>
+    <header className={styles.container}>
       <Logo />
       <a
         target="_blank"
@@ -13,7 +13,7 @@ const Header: FC = () => {
       >
         GitHub
       </a>
-    </div>
+    </header>
   );
 };
 export default Header;
