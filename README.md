@@ -8,7 +8,7 @@ To run the app in the development mode *npm start* / *yarn start*
 
 This is a shopping list application built with React and TypeScript. State management is handled through Redux and Redux Toolkit. I experimented with the Atomic Design method for structuring the project. To make the styles more manageable and predictable, I adopted a modular approach. A separate CSS variables file maintains design consistency across elements like font sizes, spacing, and colors.
 
-* The list of items is randomized whenever the page is reloaded. The randomization function can be located in *src/helpers/getRandomItems*.
+* The list of items is randomized whenever the page is reloaded. The randomization function is located in *src/helpers/getRandomItems*.
 * To change the existing value (name or amount) you can use *Enter* or click outside the field. There will be validation before updating the value. To reset the value to the previous one you can click *Esc*.
 
 ### Technologies
